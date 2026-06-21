@@ -74,15 +74,27 @@ const Window = ({ window }: WindowProps) => {
           bounds="parent"
           enableResizing={!window.isMaximized}
           dragAxis="both"
-          default={{
-            x: window.isMaximized ? 0 : window.x,
-            y: window.isMaximized ? 0 : window.y,
+          size={{
             width: window.isMaximized ? '100vw' : window.width,
             height: window.isMaximized ? '100vh' : window.height
           }}
+          position={{
+            x: window.isMaximized ? 0 : window.x,
+            y: window.isMaximized ? 0 : window.y
+          }}
           minWidth={400}
           minHeight={300}
+          onDrag={(_, d) => updateWindowPosition(window.id, d.x, d.y, window.width, window.height)}
           onDragStop={(_, d) => updateWindowPosition(window.id, d.x, d.y, window.width, window.height)}
+          onResize={(_, __, ref, ___, delta) => {
+            updateWindowPosition(
+              window.id,
+              window.x,
+              window.y,
+              parseInt(ref.style.width),
+              parseInt(ref.style.height)
+            );
+          }}
           onResizeStop={(_, __, ref, ___, delta) => {
             updateWindowPosition(
               window.id,
