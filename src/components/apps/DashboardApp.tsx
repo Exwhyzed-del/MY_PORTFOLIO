@@ -29,7 +29,7 @@ const DashboardApp = () => {
             <GitBranch className="w-5 h-5 text-secondary" />
             <span className="text-gray-400 text-sm">Projects</span>
           </div>
-          <div className="text-3xl font-bold text-secondary">6</div>
+          <div className="text-3xl font-bold text-secondary">7</div>
         </div>
         <div className="glass p-4 rounded-xl">
           <div className="flex items-center gap-2 mb-2">

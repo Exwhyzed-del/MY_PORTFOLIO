@@ -86,12 +86,13 @@ const TerminalApp = () => {
       'Tools: Git, GitHub, Linux, Docker, Jenkins'
     ],
     projects: () => [
-      '1. Anonymous College Doubt Forum',
-      '2. Resume Gap Explainer',
-      '3. Court Case Simplifier',
-      '4. Medicine Label Reader',
-      '5. Group Project Manager',
-      '6. Exam Pattern Analyzer'
+      '1. EXWHYZED-TyperPro - Smart auto-typer for cross-device use',
+      '2. Anonymous College Doubt Forum',
+      '3. Resume Gap Explainer',
+      '4. Court Case Simplifier',
+      '5. Medicine Label Reader',
+      '6. Group Project Manager',
+      '7. Exam Pattern Analyzer'
     ],
     resume: () => ['Opening Resume... (PDF viewer integration coming soon)'],
     contact: () => ['Email: sharmaaryankumar7@gmail.com', 'Phone: +91 7903721185'],
