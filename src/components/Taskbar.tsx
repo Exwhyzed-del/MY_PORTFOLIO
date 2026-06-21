@@ -2,7 +2,7 @@
 
 import { useOSStore } from '@/store/useOSStore';
 import { motion } from 'framer-motion';
-import { Settings, Terminal, Folder, User, Rocket, FileText, Trophy, BarChart3, Globe } from 'lucide-react';
+import { Settings, Terminal, Folder, User, Rocket, FileText, Trophy, Gamepad2, Globe } from 'lucide-react';
 
 const iconMap: Record<string, any> = {
   'settings': Settings,
@@ -12,7 +12,7 @@ const iconMap: Record<string, any> = {
   'projects': Rocket,
   'resume': FileText,
   'achievements': Trophy,
-  'dashboard': BarChart3,
+  'snake-game': Gamepad2,
   'social': Globe
 };
 
