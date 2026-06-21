@@ -119,6 +119,7 @@ GitHub: https://github.com/Exwhyzed-del/EXWHYZED_TYPER`
     children: [
       { name: 'HACKATHON_WINNER.pdf', type: 'file', icon: FileText, path: '/certificates/HACKATHON_WINNER.pdf' },
       { name: 'DevOps.pdf', type: 'file', icon: FileText, path: '/certificates/DevOps.pdf' },
+      { name: 'Agile.pdf', type: 'file', icon: FileText, path: '/certificates/Agile.pdf' },
     ],
   },
   { name: 'resume.pdf', type: 'file', icon: FileText, path: '/resume.pdf' },
