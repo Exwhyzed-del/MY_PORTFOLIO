@@ -70,17 +70,15 @@ const Window = ({ window }: WindowProps) => {
         style={{ zIndex: window.zIndex }}
       >
         <Rnd
-          key={window.isMaximized ? 'maximized' : 'normal'}
+          key={`${window.id}-${window.isMaximized}`}
           bounds="parent"
           enableResizing={!window.isMaximized}
           dragAxis="both"
-          size={{
+          default={{
+            x: window.isMaximized ? 0 : window.x,
+            y: window.isMaximized ? 0 : window.y,
             width: window.isMaximized ? '100vw' : window.width,
             height: window.isMaximized ? '100vh' : window.height
-          }}
-          position={{
-            x: window.isMaximized ? 0 : window.x,
-            y: window.isMaximized ? 0 : window.y
           }}
           minWidth={400}
           minHeight={300}
