@@ -11,7 +11,7 @@ const projects = [
     githubUrl: null,
     readmeUrl: null,
     liveUrl: 'https://codearena-uc8l.onrender.com/',
-    image: 'https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=cyberpunk%20coding%20arena%20battle%20platform%20with%20glowing%20code%20editor%20neon%20blue%20and%20purple%20dark%20background%20leaderboard%20display&image_size=square'
+    image: 'https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=cyberpunk%20CodeArena%20coding%20battle%20platform%20with%20split%20screen%20code%20editors%20fighting%20avatars%20neon%20cyan%20and%20magenta%20glow%20leaderboard%20with%20scores%20dark%20tech%20background&image_size=square'
   },
   {
     id: 2,
