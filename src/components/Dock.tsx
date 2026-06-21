@@ -11,8 +11,7 @@ import {
   Rocket,
   FileText,
   Trophy,
-  BarChart3,
-  Mail,
+  Gamepad2,
   Globe,
 } from 'lucide-react';
 
@@ -24,7 +23,7 @@ const dockItems = [
   { id: 'projects', icon: Rocket, title: 'Projects' },
   { id: 'resume', icon: FileText, title: 'Resume' },
   { id: 'achievements', icon: Trophy, title: 'Achievements' },
-  { id: 'dashboard', icon: BarChart3, title: 'Dashboard' },
+  { id: 'snake-game', icon: Gamepad2, title: 'Snake Game' },
   { id: 'social', icon: Globe, title: 'Social Hub' },
 ];
 

@@ -10,7 +10,7 @@ const projects = [
     tech: ['Python', 'Flask', 'PyTorch', 'Chrome Extension'],
     githubUrl: 'https://github.com/Exwhyzed-del/DEEPSEEK-AI-',
     readmeUrl: 'https://github.com/Exwhyzed-del/DEEPSEEK-AI-/blob/main/README.md',
-    image: 'https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=DEEPSEEK-AI%20DeepShield%20AI%20media%20verification%20cyberpunk%20dark%20theme%20professional%20banner%20with%20security%20shield%20and%20AI%20visual%20elements&image_size=square'
+    image: 'https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=DEEPSEEK-AI%20cyberpunk%20security%20shield%20AI%20detection%20interface%20neon%20green%20and%20blue%20dark%20theme%20sleek%20modern%20UI&image_size=square'
   },
   {
     id: 2,

@@ -3,7 +3,7 @@
 import { useOSStore, WindowState } from '@/store/useOSStore';
 import { Rnd } from 'react-rnd';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Minus, Square, Settings, Terminal, Folder, User, Rocket, FileText, Trophy, BarChart3, Globe } from 'lucide-react';
+import { X, Minus, Square, Settings, Terminal, Folder, User, Rocket, FileText, Trophy, Gamepad2, Globe } from 'lucide-react';
 import TerminalApp from './apps/TerminalApp';
 import AboutApp from './apps/AboutApp';
 import ProjectsApp from './apps/ProjectsApp';
@@ -11,7 +11,7 @@ import SettingsApp from './apps/SettingsApp';
 import FileExplorerApp from './apps/FileExplorerApp';
 import ResumeApp from './apps/ResumeApp';
 import AchievementsApp from './apps/AchievementsApp';
-import DashboardApp from './apps/DashboardApp';
+import SnakeGameApp from './apps/SnakeGameApp';
 import SocialHubApp from './apps/SocialHubApp';
 
 interface WindowProps {
@@ -26,7 +26,7 @@ const iconMap: Record<string, any> = {
   'projects': Rocket,
   'resume': FileText,
   'achievements': Trophy,
-  'dashboard': BarChart3,
+  'snake-game': Gamepad2,
   'social': Globe
 };
 
@@ -50,8 +50,8 @@ const Window = ({ window }: WindowProps) => {
         return <ResumeApp />;
       case 'achievements':
         return <AchievementsApp />;
-      case 'dashboard':
-        return <DashboardApp />;
+      case 'snake-game':
+        return <SnakeGameApp />;
       case 'social':
         return <SocialHubApp />;
       default:

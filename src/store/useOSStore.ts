@@ -41,7 +41,7 @@ const initialWindows: WindowState[] = [
   { id: "projects", title: "Projects", icon: "🚀", isOpen: false, isMinimized: false, isMaximized: false, x: 300, y: 100, width: 800, height: 600, zIndex: 14 },
   { id: "resume", title: "Resume", icon: "📄", isOpen: false, isMinimized: false, isMaximized: false, x: 350, y: 150, width: 700, height: 600, zIndex: 15 },
   { id: "achievements", title: "Achievements", icon: "🏆", isOpen: false, isMinimized: false, isMaximized: false, x: 400, y: 100, width: 700, height: 600, zIndex: 16 },
-  { id: "dashboard", title: "Dashboard", icon: "📊", isOpen: false, isMinimized: false, isMaximized: false, x: 450, y: 150, width: 900, height: 600, zIndex: 17 },
+  { id: "snake-game", title: "Snake Game", icon: "🐍", isOpen: false, isMinimized: false, isMaximized: false, x: 450, y: 150, width: 600, height: 680, zIndex: 17 },
   { id: "social", title: "Social Hub", icon: "🌐", isOpen: false, isMinimized: false, isMaximized: false, x: 550, y: 150, width: 700, height: 500, zIndex: 19 },
 ];
 

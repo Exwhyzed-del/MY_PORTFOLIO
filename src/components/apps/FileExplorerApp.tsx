@@ -8,13 +8,101 @@ interface FileItem {
   type: 'folder' | 'file';
   icon: any;
   path?: string;
+  content?: string;
   children?: FileItem[];
 }
 
 const rootFiles: FileItem[] = [
-  { name: 'about', type: 'folder', icon: Folder },
-  { name: 'projects', type: 'folder', icon: Folder },
-  { name: 'skills', type: 'folder', icon: Folder },
+  { 
+    name: 'about', 
+    type: 'folder', 
+    icon: Folder, 
+    children: [
+      { 
+        name: 'info.txt', 
+        type: 'file', 
+        icon: FileText, 
+        content: `Name: Aryan Kumar Sharma
+Role: Software Developer, DSA Enthusiast, Tech Explorer
+Developer focused on building scalable applications and solving complex problems.
+Strong foundation in Data Structures, Algorithms, software development, and emerging technologies.
+Always learning, building, and improving.` 
+      },
+    ] 
+  },
+  { 
+    name: 'projects', 
+    type: 'folder', 
+    icon: Folder, 
+    children: [
+      { 
+        name: 'deepseek-ai.txt', 
+        type: 'file', 
+        icon: FileText, 
+        content: `Project: DEEPSEEK-AI
+Description: Real-time AI that detects AI-generated images, deepfake audio, and verifies news authenticity. Features floating screenshot button for instant verification.
+Tech Stack: Python, Flask, PyTorch, Chrome Extension
+GitHub: https://github.com/Exwhyzed-del/DEEPSEEK-AI-` 
+      },
+      { 
+        name: 'exwhyzed-typer.txt', 
+        type: 'file', 
+        icon: FileText, 
+        content: `Project: EXWHYZED-TyperPro
+Description: Smart auto-typer that types anything you paste. Works across multiple devices via desktop sharing apps like AnyDesk, TeamViewer, etc.
+Tech Stack: Python, PyAutoGUI, Tkinter
+GitHub: https://github.com/Exwhyzed-del/EXWHYZED_TYPER` 
+      },
+    ] 
+  },
+  { 
+    name: 'skills', 
+    type: 'folder', 
+    icon: Folder, 
+    children: [
+      { 
+        name: 'languages.txt', 
+        type: 'file', 
+        icon: FileText, 
+        content: `Programming Languages:
+- C++
+- Java
+- Python
+- JavaScript
+- TypeScript` 
+      },
+      { 
+        name: 'frontend.txt', 
+        type: 'file', 
+        icon: FileText, 
+        content: `Frontend Technologies:
+- React
+- Next.js
+- Tailwind CSS
+- HTML5 / CSS3` 
+      },
+      { 
+        name: 'backend.txt', 
+        type: 'file', 
+        icon: FileText, 
+        content: `Backend Technologies:
+- Node.js
+- Python (Flask, FastAPI)
+- APIs (REST)
+- Databases (SQL, MongoDB)` 
+      },
+      { 
+        name: 'tools.txt', 
+        type: 'file', 
+        icon: FileText, 
+        content: `Tools & Technologies:
+- Git & GitHub
+- Linux
+- Docker
+- CI/CD (Jenkins, GitHub Actions)` 
+      },
+    ] 
+  },
   {
     name: 'certificates',
     type: 'folder',
@@ -46,10 +134,12 @@ const FileExplorerApp = () => {
     if (file.type === 'folder') {
       setCurrentPath([...currentPath, file.name]);
       setSelectedFile(null);
-    } else if (file.type === 'file' && file.path) {
-      window.open(file.path, '_blank');
+    } else {
+      setSelectedFile(file);
+      if (file.path) {
+        window.open(file.path, '_blank');
+      }
     }
-    setSelectedFile(file);
   };
 
   const goBack = () => {
@@ -86,6 +176,14 @@ const FileExplorerApp = () => {
       </div>
       <div className="glass p-4 rounded-xl flex-1 overflow-auto">
         <div className="text-secondary mb-4 font-mono text-sm">{fullPath}</div>
+        
+        {selectedFile && selectedFile.type === 'file' && selectedFile.content && (
+          <div className="mb-6 p-4 bg-[#111] rounded-lg border border-primary/30">
+            <div className="text-sm font-bold text-secondary mb-2">{selectedFile.name}</div>
+            <pre className="text-xs text-gray-300 whitespace-pre-wrap font-mono">{selectedFile.content}</pre>
+          </div>
+        )}
+        
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {currentFiles.map((file, i) => (
             <div
