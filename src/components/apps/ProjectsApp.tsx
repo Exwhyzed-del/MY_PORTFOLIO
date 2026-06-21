@@ -5,20 +5,32 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     id: 1,
+    title: 'CodeArena',
+    description: 'Live coding battle platform where users can create rooms and battle with friends! Features practice questions and a room leaderboard that shows points in real-time.',
+    tech: ['React', 'Node.js', 'WebSockets', 'Express'],
+    githubUrl: null,
+    readmeUrl: null,
+    liveUrl: 'https://codearena-uc8l.onrender.com/',
+    image: 'https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=CodeArena%20coding%20battle%20platform%20cyberpunk%20theme%20with%20leaderboard%20and%20code%20editor%20dark%20background%20neon%20colors&image_size=square'
+  },
+  {
+    id: 2,
     title: 'DEEPSEEK-AI',
     description: 'Real-time AI that detects AI-generated images, deepfake audio, and verifies news authenticity. Features floating screenshot button for instant verification.',
     tech: ['Python', 'Flask', 'PyTorch', 'Chrome Extension'],
     githubUrl: 'https://github.com/Exwhyzed-del/DEEPSEEK-AI-',
     readmeUrl: 'https://github.com/Exwhyzed-del/DEEPSEEK-AI-/blob/main/README.md',
+    liveUrl: null,
     image: 'https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=DEEPSEEK-AI%20cyberpunk%20security%20shield%20AI%20detection%20interface%20neon%20green%20and%20blue%20dark%20theme%20sleek%20modern%20UI&image_size=square'
   },
   {
-    id: 2,
+    id: 3,
     title: 'EXWHYZED-TyperPro',
     description: 'Smart auto-typer that types anything you paste. Works across multiple devices via desktop sharing apps like AnyDesk, TeamViewer, etc.',
     tech: ['Python', 'PyAutoGUI', 'Tkinter'],
     githubUrl: 'https://github.com/Exwhyzed-del/EXWHYZED_TYPER',
     readmeUrl: 'https://github.com/Exwhyzed-del/EXWHYZED_TYPER/blob/main/Typer/README.md',
+    liveUrl: null,
     image: 'https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=EXWHYZED-TyperPro%20auto%20typer%20software%20cyberpunk%20dark%20theme%20professional%20banner%20with%20keyboard%20and%20code%20elements&image_size=square'
   }
 ];
@@ -51,6 +63,16 @@ const ProjectsApp = () => {
                 ))}
               </div>
               <div className="flex gap-2">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm bg-secondary/20 hover:bg-secondary/30 text-secondary px-4 py-2 rounded transition-all inline-block"
+                  >
+                    Live Demo
+                  </a>
+                )}
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}

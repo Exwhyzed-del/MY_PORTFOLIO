@@ -36,6 +36,15 @@ Always learning, building, and improving.`
     icon: Folder, 
     children: [
       { 
+        name: 'codearena.txt', 
+        type: 'file', 
+        icon: FileText, 
+        content: `Project: CodeArena
+Description: Live coding battle platform where users can create rooms and battle with friends! Features practice questions and a room leaderboard that shows points in real-time.
+Tech Stack: React, Node.js, WebSockets, Express
+Live: https://codearena-uc8l.onrender.com/` 
+      },
+      { 
         name: 'deepseek-ai.txt', 
         type: 'file', 
         icon: FileText, 
