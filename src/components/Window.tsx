@@ -73,7 +73,7 @@ const Window = ({ window }: WindowProps) => {
           key={window.isMaximized ? 'maximized' : 'normal'}
           bounds="parent"
           enableResizing={!window.isMaximized}
-          dragAxis={window.isMaximized ? 'x' : 'both'}
+          dragAxis="both"
           size={{
             width: window.isMaximized ? '100vw' : window.width,
             height: window.isMaximized ? '100vh' : window.height
