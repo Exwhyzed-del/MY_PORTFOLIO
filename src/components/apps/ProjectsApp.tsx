@@ -9,7 +9,7 @@ const projects = [
     description: 'Smart auto-typer that types anything you paste. Works across multiple devices via desktop sharing apps like AnyDesk, TeamViewer, etc.',
     tech: ['Python', 'PyAutoGUI', 'Tkinter'],
     githubUrl: 'https://github.com/Exwhyzed-del/EXWHYZED_TYPER',
-    readmeUrl: 'https://github.com/Exwhyzed-del/EXWHYZED_TYPER/blob/main/README.md',
+    readmeUrl: 'https://github.com/Exwhyzed-del/EXWHYZED_TYPER/blob/main/Typer/README.md',
     image: 'https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=EXWHYZED-TyperPro%20auto%20typer%20software%20cyberpunk%20dark%20theme%20professional%20banner%20with%20keyboard%20and%20code%20elements&image_size=square'
   }
 ];
