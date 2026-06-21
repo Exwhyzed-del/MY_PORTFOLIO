@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Trophy, Code, Flame } from 'lucide-react';
+import { Trophy, Code, Flame, Award } from 'lucide-react';
 
 const achievements = [
   {
@@ -14,6 +14,14 @@ const achievements = [
   },
   {
     id: 2,
+    title: 'Agile Certified',
+    description: 'Completed Agile Methodology Certification',
+    rarity: 'Epic',
+    icon: Award,
+    color: 'text-accent',
+  },
+  {
+    id: 3,
     title: 'DSA Pro',
     description: 'Solved 300+ problems on LeetCode',
     rarity: 'Epic',
@@ -21,7 +29,7 @@ const achievements = [
     color: 'text-accent',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Coding Streak',
     description: '114-day coding streak on LeetCode',
     rarity: 'Rare',
@@ -29,7 +37,7 @@ const achievements = [
     color: 'text-secondary',
   },
   {
-    id: 4,
+    id: 5,
     title: '50-Day Streak x2',
     description: 'Two 50-day coding streaks on LeetCode',
     rarity: 'Epic',
@@ -37,7 +45,7 @@ const achievements = [
     color: 'text-accent',
   },
   {
-    id: 5,
+    id: 6,
     title: '100-Day Streak',
     description: '100-day coding streak on LeetCode',
     rarity: 'Legendary',
