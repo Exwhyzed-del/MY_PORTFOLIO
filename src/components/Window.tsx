@@ -71,8 +71,8 @@ const Window = ({ window }: WindowProps) => {
       >
         <Rnd
           bounds="parent"
-          disableDragging={window.isMaximized}
           enableResizing={!window.isMaximized}
+          dragAxis={window.isMaximized ? 'x' : 'both'}
           size={{
             width: window.isMaximized ? '100vw' : window.width,
             height: window.isMaximized ? '100vh' : window.height
