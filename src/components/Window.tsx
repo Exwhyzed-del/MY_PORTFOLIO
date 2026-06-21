@@ -71,7 +71,7 @@ const Window = ({ window }: WindowProps) => {
       >
         <Rnd
           key={`${window.id}-${window.isMaximized}`}
-          bounds="parent"
+          bounds="body"
           enableResizing={!window.isMaximized}
           dragAxis="both"
           size={{
