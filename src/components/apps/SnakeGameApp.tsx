@@ -10,6 +10,8 @@ const INITIAL_FOOD = { x: 15, y: 10 };
 const INITIAL_DIRECTION = { x: 1, y: 0 };
 const INITIAL_SPEED = 150;
 
+type Position = { x: number; y: number };
+
 // Sound effects using Web Audio API
 const playSound = (type: 'eat' | 'gameOver' | 'move') => {
   const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
@@ -57,7 +59,7 @@ const SnakeGameApp = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const generateFood = useCallback((currentSnake: typeof snake) => {
-    let newFood;
+    let newFood: Position;
     do {
       newFood = {
         x: Math.floor(Math.random() * GRID_SIZE),
