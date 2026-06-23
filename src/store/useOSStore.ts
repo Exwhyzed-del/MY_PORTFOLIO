@@ -126,7 +126,7 @@ export const useOSStore = create<OSState>()(
     {
       name: 'aryan-os-storage',
       partialize: (state) => ({ wallpaper: state.wallpaper }),
-      migrate: (persistedState, version) => {
+      migrate: (persistedState: unknown, version: number) => {
         // List of valid wallpapers
         const validWallpapers = [
           '/wallpapers/blackhole.jpg',
@@ -137,13 +137,14 @@ export const useOSStore = create<OSState>()(
           '/wallpapers/scenery.png',
         ];
         
+        const state = persistedState as { wallpaper?: string };
         if (
-          persistedState && 
-          (!persistedState.wallpaper || !validWallpapers.includes(persistedState.wallpaper))
+          state && 
+          (!state.wallpaper || !validWallpapers.includes(state.wallpaper))
         ) {
-          return { ...persistedState, wallpaper: defaultWallpaper };
+          return { ...state, wallpaper: defaultWallpaper };
         }
-        return persistedState as any;
+        return state;
       },
     }
   )
