@@ -11,13 +11,27 @@ const Desktop = () => {
   const hasHydrated = useHasHydrated();
   const isAnyWindowMaximized = windows.some(w => w.isOpen && w.isMaximized && !w.isMinimized);
 
+  // List of valid wallpapers
+  const validWallpapers = [
+    '/wallpapers/blackhole.jpg',
+    '/wallpapers/car.jpg',
+    '/wallpapers/ghost.jpg',
+    '/wallpapers/miles-swinging-through-queen-lights-ka-1920x1080.jpg',
+    '/wallpapers/shrine.png',
+    '/wallpapers/scenery.png',
+  ];
+  
+  const currentWallpaper = validWallpapers.includes(wallpaper) 
+    ? wallpaper 
+    : '/wallpapers/car.jpg';
+  
   return (
     <div
       className="fixed inset-0 overflow-hidden"
       style={
         hasHydrated
           ? {
-              backgroundImage: `url(${wallpaper || '/wallpapers/car.jpg'})`,
+              backgroundImage: `url(${currentWallpaper})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'
