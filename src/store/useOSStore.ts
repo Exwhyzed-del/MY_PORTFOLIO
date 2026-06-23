@@ -50,7 +50,7 @@ const initialWindows: WindowState[] = [
 ];
 
 let zIndexCounter = 20;
-const defaultWallpaper = "/wallpapers/car.jpg";
+const defaultWallpaper = "";
 
 export const useOSStore = create<OSState>()(
   persist(
