@@ -50,11 +50,11 @@ const initialWindows: WindowState[] = [
 ];
 
 let zIndexCounter = 20;
-const defaultWallpaper = "";
+const defaultWallpaper = "/wallpapers/car.jpg";
 
 export const useOSStore = create<OSState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       bootSequenceComplete: false,
       setBootSequenceComplete: (complete) => set({ bootSequenceComplete: complete }),
       windows: initialWindows,
@@ -126,6 +126,12 @@ export const useOSStore = create<OSState>()(
     {
       name: 'aryan-os-storage',
       partialize: (state) => ({ wallpaper: state.wallpaper }),
+      migrate: (persistedState, version) => {
+        if (persistedState && !persistedState.wallpaper) {
+          return { ...persistedState, wallpaper: defaultWallpaper };
+        }
+        return persistedState as any;
+      },
     }
   )
 );
