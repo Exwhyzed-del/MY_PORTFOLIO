@@ -15,9 +15,9 @@ const Desktop = () => {
     <div
       className="fixed inset-0 overflow-hidden"
       style={
-        hasHydrated && wallpaper
+        hasHydrated
           ? {
-              backgroundImage: `url(${wallpaper})`,
+              backgroundImage: `url(${wallpaper || '/wallpapers/car.jpg'})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat'
